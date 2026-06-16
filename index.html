@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Textbook Answers | Titan Chemistry Portal</title>
+  <style>
+    :root {
+      --bg:#f6f7fb; --card:#ffffff; --ink:#182033; --muted:#667085;
+      --brand:#6f5cff; --brand2:#2d7df6; --line:#e7eaf2; --soft:#f0edff;
+      --green:#10a66a;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      background:var(--bg); color:var(--ink);
+    }
+    .hero {
+      background:linear-gradient(135deg,#4930a3,#7b61ff 60%,#8bb7ff);
+      color:white; padding:58px 20px 62px; text-align:center;
+    }
+    .hero h1 { margin:0; font-size:clamp(34px,5vw,58px); letter-spacing:.3px; }
+    .hero p { margin:14px 0 0; font-size:clamp(16px,2vw,22px); opacity:.92; }
+    .wrap { max-width:1120px; margin:0 auto; padding:28px 20px 60px; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; margin-bottom:26px; }
+    .back { color:#4058d6; text-decoration:none; font-weight:700; }
+    .chip { background:white; border:1px solid var(--line); border-radius:999px; padding:10px 16px; color:var(--muted); box-shadow:0 2px 8px rgba(16,24,40,.04); }
+    .note { background:white; border-left:6px solid var(--brand); border-radius:16px; padding:18px 20px; color:#475467; box-shadow:0 8px 26px rgba(16,24,40,.05); margin-bottom:22px; }
+    .toolbar { display:flex; gap:12px; margin-bottom:24px; flex-wrap:wrap; }
+    input {
+      flex:1 1 320px; border:1px solid var(--line); border-radius:16px; padding:16px 18px;
+      font-size:17px; outline:none; box-shadow:0 4px 16px rgba(16,24,40,.04);
+    }
+    input:focus { border-color:var(--brand); box-shadow:0 0 0 4px rgba(111,92,255,.12); }
+    button {
+      border:1px solid var(--line); background:white; border-radius:16px; padding:0 18px;
+      color:#475467; font-weight:700; cursor:pointer;
+    }
+    details {
+      background:var(--card); border:1px solid var(--line); border-radius:22px;
+      margin:18px 0; padding:20px 22px; box-shadow:0 12px 32px rgba(16,24,40,.06);
+    }
+    summary {
+      cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:12px;
+      font-size:28px; font-weight:800;
+    }
+    summary::-webkit-details-marker { display:none; }
+    .count { background:var(--soft); color:#5b42d6; border-radius:999px; padding:8px 14px; font-size:15px; font-weight:800; white-space:nowrap; }
+    .grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(185px,1fr)); gap:12px;
+      margin-top:20px;
+    }
+    .item {
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      min-height:64px; padding:15px 16px; border:1px solid var(--line); border-radius:16px;
+      text-decoration:none; color:var(--ink); background:linear-gradient(180deg,#fff,#fbfcff);
+      transition:transform .16s, box-shadow .16s, border-color .16s;
+    }
+    .item:hover { transform:translateY(-2px); box-shadow:0 8px 22px rgba(16,24,40,.08); border-color:#cfd6ff; }
+    .item-title { font-size:18px; font-weight:800; }
+    .pill { background:#eaf2ff; color:#2264d1; border-radius:999px; padding:7px 10px; font-size:13px; font-weight:800; }
+    .topic-pill { background:#e8fff4; color:#008b5a; }
+    .hidden { display:none !important; }
+    .empty { color:var(--muted); margin-top:20px; display:none; }
+    footer { text-align:center; color:#98a2b3; padding:28px; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>📘 Textbook Answers</h1>
+    <p>Version 3 · Mastering Chemistry</p>
+  </header>
+
+  <main class="wrap">
+    <div class="topbar">
+      <a class="back" href="https://snorlaxhk.github.io/">← Back to Titan Chemistry Portal</a>
+      <span class="chip">Google Drive links open in a new tab</span>
+    </div>
+
+    <div class="note">Use the search box to find a unit or topic quickly, e.g. <b>Unit 12</b> or <b>Topic 2</b>.</div>
+
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search, e.g. Unit 10, Topic 1..." />
+      <button onclick="expandAll()">Expand all</button>
+      <button onclick="collapseAll()">Collapse all</button>
+    </div>
+
+    <details open>
+      <summary><span>📚 Unit Answers</span><span class="count">55 links</span></summary>
+      <div class="grid">
+        <a class="item unit" data-search="unit 1" href="https://drive.google.com/file/d/17aFZtRd4oKqfLNG69hNWKw3_GuLYJAUN/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 1</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 2" href="https://drive.google.com/file/d/1fbWWg1j-Er8KBk_llCO8aL23Jda0tlmc/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 2</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 3" href="https://drive.google.com/file/d/1p3zKn0sJ0hGRjqeDafrqnFEIve1D6cxy/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 3</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 4" href="https://drive.google.com/file/d/1eNkdMyWb11phnXDMR-Y749GtN0UrZat6/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 4</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 5" href="https://drive.google.com/file/d/1DR9y_CX0eWunF3ZK4R963On_NYwsX5x1/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 5</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 6" href="https://drive.google.com/file/d/1z6pUe0LyHPwZdVYxlNJHU55OunQfuQnL/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 6</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 7" href="https://drive.google.com/file/d/1xSGfXmcpxxwrRsD2Z5S4SLw00KAiNBNG/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 7</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 8" href="https://drive.google.com/file/d/1mNZnJencV0z2H_O21sLITjzcOMsRU9vN/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 8</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 9" href="https://drive.google.com/file/d/1cIxOqy6HjwUQpH6zY_fWOOZLyyO3jHKW/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 9</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 10" href="https://drive.google.com/file/d/1WoBssbqzOcBgy-hoUlrVMk9bHx2GKOUe/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 10</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 11" href="https://drive.google.com/file/d/1LFWI7yd6CWSTnI6pZyhFTimJm7Gs4Z9n/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 11</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 12" href="https://drive.google.com/file/d/1mjsY6R7FK9FSc-KjjU8eD7FX3aOpyB3r/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 12</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 13" href="https://drive.google.com/file/d/1T5v-FBuXYWGhk2pJS2mW9UiniYZ3RViS/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 13</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 14" href="https://drive.google.com/file/d/1s6x4qtXQ2S8idcpAgvsFjusxgJjM-Xfx/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 14</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 15" href="https://drive.google.com/file/d/13YhN4QZmMYmRWIMEdcgKOQ6ngKy89F7i/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 15</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 16" href="https://drive.google.com/file/d/1_yLadtPJqCz5GxzbPqeiaE3aLjbIqFhf/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 16</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 17" href="https://drive.google.com/file/d/1Vb3a3VHSdkID37ZHtdGA56snvcburiMy/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 17</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 18" href="https://drive.google.com/file/d/1ORsg14NfnCA9OQ2Jh7OWFU0LnJ6Cj06k/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 18</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 19" href="https://drive.google.com/file/d/1RpkmT_e0x2hOHHDTI4GmX2ks8OPdrvdz/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 19</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 20" href="https://drive.google.com/file/d/1ParcKeMVFANMhjvscakDu4UYi_iqV4MZ/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 20</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 21" href="https://drive.google.com/file/d/1aKyEGf89fNOpu8zRqCH2K2aKtZjABb7V/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 21</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 22" href="https://drive.google.com/file/d/18CyS6KqiMWKIuvxsjzNu8gaXLzs_J8qG/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 22</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 23" href="https://drive.google.com/file/d/1Nq6vDk13kfjnghu5nw8lisJSN_G1JbJR/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 23</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 24" href="https://drive.google.com/file/d/1REbuv7BuqjOpVEHjfEaXclr9qVqPyuWv/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 24</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 25" href="https://drive.google.com/file/d/13T9j5GT4g8jUnL48-t7F13jKsoqiPMo_/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 25</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 26" href="https://drive.google.com/file/d/12p_i9ELnr1doaxViCn8MfDmAby-bidAI/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 26</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 27" href="https://drive.google.com/file/d/1EfiYlerwETCg_aZeR-8tKbquG-asgmvU/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 27</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 28" href="https://drive.google.com/file/d/1iw5gCvx531xmuOAZHA-eat0lgzPRNGX3/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 28</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 29" href="https://drive.google.com/file/d/1icPz_WonSALrwI-zIJOY2IXpPXfEEl4a/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 29</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 30" href="https://drive.google.com/file/d/1U00h6x8_9XZfdnwZIoLm9ohAisv9F7q_/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 30</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 31" href="https://drive.google.com/file/d/1paPjOS3iVPt5uR6YXtJPypl9YRClWSc5/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 31</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 32" href="https://drive.google.com/file/d/1KmCjLLdGpBHLqcZYN9akKkFBFbcmh4xc/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 32</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 33" href="https://drive.google.com/file/d/1pGZWp9m51NKZFjTSG9Y3vdnXG72ftud9/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 33</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 34" href="https://drive.google.com/file/d/1NEi2KP8WnFFH_m-QhCEkZF9m05aaqGoR/view?usp=drive_link" target="_blank" rel="noopener">
+          <span class="item-title">Unit 34</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 35" href="https://drive.google.com/file/d/16jnxW4u1aGbo99KTHezcGEyc4M91rEF5/view?usp=drive_link" target="_blank" rel="noopener">
+          <span class="item-title">Unit 35</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 36" href="https://drive.google.com/file/d/1VN0D_Luqagid71erL41aub8kFmAitBW1/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 36</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 37" href="https://drive.google.com/file/d/166GmG81TJXElvw5RP6V_tmhxUGPlM2G4/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 37</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 38" href="https://drive.google.com/file/d/1RWse6dDqJnJ0H_y-3ilKd872-ioSRo5Z/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 38</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 39" href="https://drive.google.com/file/d/1vZlge281Jh3ebaN16oAQM0yz8KBc0dEn/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 39</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 40" href="https://drive.google.com/file/d/1fBpLJ73Bq0zlfncbW1S4s7ERkg6aTEwM/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 40</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 41" href="https://drive.google.com/file/d/1oX2ir5zL8Q_MdzsSRlkz0gx1PkaLbMy4/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 41</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 42" href="https://drive.google.com/file/d/1Ckd4BEBqjKsQknqbQSig7Jgw-qjSQJmE/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 42</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 43" href="https://drive.google.com/file/d/1-LCYnIz1_9j4l2zdAhuGLW63e_l4M7kv/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 43</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 44" href="https://drive.google.com/file/d/1QPgmNKpsLAF4WbT29k89LBjSCFrW9RD1/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 44</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 45" href="https://drive.google.com/file/d/1wQpOWj-QT8EJ1SYCqdhlJBvdCOFeFN52/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 45</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 46" href="https://drive.google.com/file/d/1TVEEvW4zP6EtCabrF30QuNLRLwqt13oD/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 46</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 47" href="https://drive.google.com/file/d/1kEACFloUCKwzJTpI_G4pwNAUaGf4ySX5/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 47</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 48" href="https://drive.google.com/file/d/1k03RY6odOhmX3uS-bReR3CGGtwlgHtbi/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 48</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 49" href="https://drive.google.com/file/d/1sWq0gbxVZTPUi-vl9qsnK0zmr308gK_A/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 49</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 50" href="https://drive.google.com/file/d/179MMK8s74UA86QCWKlnuFaz6uQ0gaEaS/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 50</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 51" href="https://drive.google.com/file/d/1HwNd1YjMzmSkirz6z2ztfIJcJkMvUrPI/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 51</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 52" href="https://drive.google.com/file/d/1OWG1FL3CWZJtUAaO5CVRFV6lrYFIhYyk/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 52</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 53" href="https://drive.google.com/file/d/1iNdPujvjH1XsFZfqz4aS-_Pcy00-kso5/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 53</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 54" href="https://drive.google.com/file/d/1vi2TJMZujSGIKrHx9sRR46yeT3lHWYEA/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 54</span><span class="pill">Answer</span>
+        </a>
+        <a class="item unit" data-search="unit 55" href="https://drive.google.com/file/d/13h8K-b2Prbhe3ut9qZjtcd2uWndUjcvn/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Unit 55</span><span class="pill">Answer</span>
+        </a>
+      </div>
+    </details>
+
+    <details open>
+      <summary><span>📝 Topic Exercises</span><span class="count">2 links</span></summary>
+      <div class="grid">
+        <a class="item topic" data-search="topic 1" href="https://drive.google.com/file/d/12kP2w3usegxwoLDVgKp3Z2eIWMAgVN4D/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Topic 1</span><span class="pill topic-pill">Topic</span>
+        </a>
+        <a class="item topic" data-search="topic 2" href="https://drive.google.com/file/d/12fvq_-Ql113dRZOSu8jwMBUHRr0tJKhF/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="item-title">Topic 2</span><span class="pill topic-pill">Topic</span>
+        </a>
+      </div>
+    </details>
+
+    <p id="empty" class="empty">No matching resources found.</p>
+  </main>
+
+  <footer>© 2026 Titan Chemistry Portal</footer>
+
+  <script>
+    const search = document.getElementById('search');
+    const items = Array.from(document.querySelectorAll('.item'));
+    const empty = document.getElementById('empty');
+
+    search.addEventListener('input', () => {
+      const q = search.value.trim().toLowerCase();
+      let shown = 0;
+      items.forEach(item => {
+        const ok = item.dataset.search.includes(q) || item.textContent.toLowerCase().includes(q);
+        item.classList.toggle('hidden', !ok);
+        if (ok) shown++;
+      });
+      document.querySelectorAll('details').forEach(d => d.open = true);
+      empty.style.display = shown ? 'none' : 'block';
+    });
+
+    function expandAll() {
+      document.querySelectorAll('details').forEach(d => d.open = true);
+    }
+    function collapseAll() {
+      document.querySelectorAll('details').forEach(d => d.open = false);
+    }
+  </script>
+</body>
+</html>
